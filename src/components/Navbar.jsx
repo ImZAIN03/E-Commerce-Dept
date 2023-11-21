@@ -1,13 +1,16 @@
 import React from 'react';
 import { BsSearch } from 'react-icons/bs';
+import { Link } from 'react-router-dom';
 
 const Navbar = () => {
   return (
-    <div className="bg-gradient-to-r from-gray-100 to-gray-300 sticky top-0 bg-white z-50">
+    <div className="bg-gradient-to-r from-gray-300 to-gray-400 sticky top-0 bg-white z-50">
       <div className="flex justify-between items-center container mx-auto py-2">
-        {/* Left Section: Logo and Navigation Links */}
+
         <div className="flex items-center">
-          <img src='/src/assets/logo.png' alt='Logo' className='w-20 object-fill' />
+          <Link to="/">
+            <img src='/src/assets/logo.png' alt='Logo' className='w-20 object-fill' />
+          </Link>
         </div>
 
         <div className="flex items-center">
