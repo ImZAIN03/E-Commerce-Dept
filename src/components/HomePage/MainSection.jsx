@@ -5,7 +5,7 @@ import FavoritesSection from './FavoritesSection';
 
 const MainSection = () => {
   return (
-    <div className="flex">
+    <div className="flex mb-5">
       <div className="w-1/4">
         <CategoriesSection />
       </div>

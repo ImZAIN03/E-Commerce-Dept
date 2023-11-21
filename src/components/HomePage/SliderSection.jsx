@@ -21,7 +21,7 @@ const SliderSection = () => {
   };
 
   return (
-    <div>
+    <div className='mt-10'>
       <Slider {...settings}>
         {images.map((image, index) => (
           <div key={index}>
