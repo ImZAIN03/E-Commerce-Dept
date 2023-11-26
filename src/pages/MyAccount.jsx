@@ -1,29 +1,26 @@
 import React from 'react';
 
 const MyAccount = () => {
-  // Dummy user details
   const userDetails = {
     username: 'ABC',
     email: 'abc@example.com',
-    membership: 'Gold', // Membership level
+    membership: 'Gold',
     address: '123 Main Street, City, Country',
-    // ... other details
   };
 
   return (
-    <div style={{ display: 'flex', flexDirection: 'column', minHeight: '100vh' }}>
-      <div style={{ flex: '1', padding: '20px', maxWidth: '600px', margin: '0 auto' }}>
-        <h2 style={{ borderBottom: '1px solid #ccc', paddingBottom: '10px' }}>My Account</h2>
-        <div style={{ marginTop: '20px', textAlign: 'left', fontSize: '25px' }}>
+    <div className="flex flex-col min-h-screen bg-gray-100">
+      <div className="flex-1 p-8 max-w-screen-md mx-auto bg-white shadow-lg rounded-lg">
+        <h2 className="border-b pb-4 text-3xl font-bold text-center text-gray-900">My Account</h2>
+        <div className="mt-8 text-lg leading-relaxed">
           <p><strong>Username:</strong> {userDetails.username}</p>
           <p><strong>Email:</strong> {userDetails.email}</p>
           <p><strong>Membership:</strong> {userDetails.membership}</p>
           <p><strong>Address:</strong> {userDetails.address}</p>
-          {/* Include other user details */}
         </div>
       </div>
-      <footer style={{ backgroundColor: '#f5f5f5', padding: '10px', textAlign: 'center' }}>
-        &copy; Your Website 2023
+      <footer className="bg-gray-200 py-4 text-center border-t border-gray-300 text-gray-600 mt-8">
+        &copy; E-Commerce 2023
       </footer>
     </div>
   );
