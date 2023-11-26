@@ -1,13 +1,21 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Footer = () => {
   return (
-    <div className="flex justify-between p-4 bg-gray-700 ">
-      <div className='border-2 border-gray-600 p-4 bg-white text-black rounded-md'>
-        <div className="bg-white text-black">Help/FAQ</div>
+    <div className="flex justify-between px-4 py-3 bg-gradient-to-r from-gray-300 to-gray-700">
+      <div className="flex items-center">
+        <img
+          src="/src/assets/logo.png"  
+          alt="E-Commerce"
+          className="w-20 object-fill"  
+        />
       </div>
-      <div>
-        <p className="border-2 border-gray-600 bg-white text-black p-4 rounded-md">© E-Commerce React</p>
+
+      <div className="flex items-center space-x-4 font-semibold">
+        <Link to="/about-us" className="text-white">About Us</Link>
+        <Link to="/new-products" className="text-white">New Products</Link>
+        <Link to="/cart" className="text-white">Cart</Link>
       </div>
     </div>
   );
