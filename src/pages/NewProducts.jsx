@@ -3,11 +3,11 @@ import { useNavigate } from 'react-router-dom';
 
 const ProductModal = ({ product, closeModal }) => (
   <div className="fixed top-0 left-0 w-full h-full flex items-center justify-center bg-gray-800 bg-opacity-90">
-    <div className="bg-white p-8 rounded-lg">
+    <div className="mt-10 w-5/6 bg-gray-200 text-black font-semibold p-8 rounded-lg">
       <img
         src={product.image}
         alt={product.name}
-        className="w-full h-48 object-cover mb-4 rounded-md shadow-md"
+        className="w-96 h-full object-cover mb-4 rounded-md shadow-md mx-auto"
       />
       <h3 className="text-xl font-semibold mb-2">{product.name}</h3>
       <p className="text-gray-600 mb-4">{product.description}</p>
