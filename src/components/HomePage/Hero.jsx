@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { FiShoppingCart, FiUser, FiBox, FiInfo } from "react-icons/fi"; // Import icons from react-icons
+import { FiShoppingCart, FiUser, FiBox, FiInfo, FiAtSign } from "react-icons/fi"; 
 
 const Hero = () => {
   return (
@@ -24,6 +24,13 @@ const Hero = () => {
         <FiUser className="mr-1" />
         My Account
       </Link>
+
+      <Link to="/login" className="flex items-center cursor-pointer">
+        <FiAtSign className="mr-1" />
+        Sign In/Sign Up
+      </Link>
+
+      
     </div>
   );
 };

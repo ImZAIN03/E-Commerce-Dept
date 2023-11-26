@@ -9,6 +9,7 @@ const CategoriesSection = () => {
         <option value="clothing">Clothing</option>
         <option value="appliances">Appliances</option>
         <option value="personal care">Personal Care</option>
+        <option value="accessories">Accessories</option>
       </select>
     </div>
   );
