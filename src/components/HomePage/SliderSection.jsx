@@ -21,7 +21,7 @@ const SliderSection = () => {
   };
 
   return (
-    <div className='mt-10'>
+    <div className='mt-2 border-8 border-gray-500 '>
       <Slider {...settings}>
         {images.map((image, index) => (
           <div key={index}>

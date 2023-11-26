@@ -2,9 +2,9 @@ import React from 'react';
 
 const CategoriesSection = () => {
   return (
-    <div className="mx-2">
-      <h2 className="mb-4 font-semibold text-xl">Categories</h2>
-      <select className="p-2 rounded border">
+    <div className="text-center">
+      <h2 className="mb-4 font-semibold text-2xl">Categories</h2>
+      <select className="p-2 rounded border text-md">
         <option value="electronics">Electronics</option>
         <option value="clothing">Clothing</option>
         <option value="appliances">Appliances</option>

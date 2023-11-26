@@ -1,7 +1,6 @@
 import React from 'react';
 
 const FavoritesSection = () => {
-  // Add your favorite items content here
 
   return (
     <div className="text-center">

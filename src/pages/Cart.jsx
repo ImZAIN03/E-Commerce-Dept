@@ -1,6 +1,9 @@
+// Cart.jsx
 import React from 'react';
 
 const Cart = ({ cartItems, removeFromCart }) => {
+  console.log('Received cart items in Cart component:', cartItems);
+
   const handleRemove = (productId) => {
     removeFromCart(productId);
   };
@@ -11,31 +14,30 @@ const Cart = ({ cartItems, removeFromCart }) => {
       {cartItems && cartItems.length === 0 ? (
         <p>Your cart is empty.</p>
       ) : (
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+        <ul>
           {cartItems?.map((cartItem) => (
-            <div key={cartItem.id} className="bg-white p-4 rounded-lg shadow-md relative">
-              <div className="flex items-center mb-4">
+            <li key={cartItem.id} className="mb-2">
+              <div className="flex items-center">
                 <img
                   src={cartItem.image}
                   alt={cartItem.name}
-                  className="w-16 h-16 object-cover mr-4 rounded-md"
+                  className="w-16 h-16 object-cover mr-4"
                 />
                 <div>
                   <p className="text-lg font-semibold">{cartItem.name}</p>
                   <p className="text-gray-600">{cartItem.description}</p>
                   <p className="text-gray-800">${cartItem.price} x {cartItem.quantity}</p>
+                  <button
+                    onClick={() => handleRemove(cartItem.id)}
+                    className="text-red-500 font-semibold hover:underline focus:outline-none"
+                  >
+                    Remove
+                  </button>
                 </div>
               </div>
-              <button
-                onClick={() => handleRemove(cartItem.id)}
-                className="text-red-500 font-semibold hover:underline focus:outline-none absolute bottom-2 right-2"
-                style={{ zIndex: '1' }}
-              >
-                Remove
-              </button>
-            </div>
+            </li>
           ))}
-        </div>
+        </ul>
       )}
     </div>
   );

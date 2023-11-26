@@ -4,7 +4,7 @@ import { FiShoppingCart, FiUser, FiBox, FiInfo, FiAtSign } from "react-icons/fi"
 
 const Hero = () => {
   return (
-    <div className="w-2/5 mx-auto flex items-center justify-between  py-4 ">
+    <div className="w-3/5 mx-auto my-1 flex items-center justify-between pt-2 font-semibold text-lg">
       <Link to="/new-products" className="flex items-center cursor-pointer">
         <FiBox className="mr-1" />
         New Products
