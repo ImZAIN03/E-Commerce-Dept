@@ -5,84 +5,88 @@ const Items = ({ addToCart }) => {
     {
       id: 1,
       image: 'https://images.unsplash.com/photo-1523275335684-37898b6baf30?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cHJvZHVjdHxlbnwwfHwwfHx8MA%3D%3D',
-      name: 'Item 1',
+      name: 'Watch',
       price: 1200,
       description: 'Good Quality Watch',
     },
     {
       id: 2,
       image: 'https://www.edesk.com/wp-content/uploads/2021/03/find-trending-products-sell-ecommerce.png',
-      name: 'Item 2',
+      name: 'Laptop',
       price: 30000,
-      description: 'Good Laptop',
+      description: 'Laptop for sale',
     },
     {
       id: 3,
       image: 'https://thumbs.dreamstime.com/b/cleaning-products-hong-kong-supermarket-28191093.jpg',
-      name: 'Item 3',
+      name: 'Bathroom Cleaner',
       price: 2590,
-      description: 'Bathroom Cleaner',
+      description: 'Bathroom Products for Cleaning',
     },
     {
       id: 4,
       image: 'https://airspeed.ph/wp-content/uploads/2020/06/The-Importance-of-Courier-Services-for-Online-Shopping-of-Essential-Items.jpg',
-      name: 'Item 4',
+      name: 'Shopping Cart',
       price: 1457,
-      description: 'Shopping Cart',
+      description: 'Shopping Cart for products',
     },
     {
       id: 5,
       image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQbkFdPF3NH6EJIXAFMg0Ii2hxSrDHcd2fpfg&usqp=CAU',
-      name: 'Item 5',
+      name: 'Food Items',
       price: 4560,
-      description: 'Food Items',
+      description: 'Every day Food Items',
     },
     {
       id: 6,
       image: 'https://hips.hearstapps.com/hmg-prod/images/22-del-supermarket-explainer-lead-1676584430.jpg?crop=1xw:1xh;center,top&resize=1200:*',
-      name: 'Item 6',
+      name: 'Fresh Food',
       price: 7500,
-      description: 'Fresh Food',
+      description: 'Fresh Food on sale.',
     },
     {
       id: 7,
       image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR0ubPdQutVjqSU8gQokSUjWVipAW1ZBxsSHQ&usqp=CAU',
-      name: 'Item 7',
+      name: 'Washing Products',
       price: 1455,
-      description: 'Washing Products',
+      description: 'Washing Products for everyday use.',
     },
     {
       id: 8,
       image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTrUN6WTST0PPEe2BUkCMx0RFn6E0veeIKFyQ&usqp=CAU',
-      name: 'Item 8',
+      name: 'Bedroom Set',
       price: 15902,
-      description: 'Bedroom Set',
+      description: 'Elegent Bedroom Set',
     },
+    {
+      id: 9,
+      image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTFfha3mKEFOWK3DgWFippxqkIRA-QXodVX4w&usqp=CAU',
+      name: 'Clothes Set',
+      price: 15902,
+      description: 'Clothes Set Description',
+    }
   ];
 
   const handleAddToCart = (product) => {
     addToCart(product);
   };
 
- return (
+  return (
     <div className="flex flex-wrap justify-center items-center">
       {products.map((product) => (
-        <div key={product.id} className="m-4 max-w-xs bg-white p-6 rounded-lg shadow-md">
-          <img
-            src={product.image}
-            alt={product.name}
-            className="w-full h-48 object-cover mb-4 rounded-md"
-          />
-          <div className="text-center">
-            <h3 className="text-lg font-semibold mb-2">{product.name}</h3>
-            <p className="text-gray-600 mb-4">{product.description}</p>
-            <p className="text-gray-800 font-bold">Pkr {product.price}</p>
-            <button
-              onClick={() => handleAddToCart(product)}
-              className="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600 focus:outline-none focus:ring focus:border-blue-300"
-            >
-              Add to Cart
-            </button>
+        <div key={product.id} className="m-4 w-full md:w-1/2 lg:w-1/3 xl:w-1/4">
+          <div className="bg-gray-100 p-6 rounded-lg shadow-md border border-neutral-600">
+            <img
+              src={product.image}
+              alt={product.name}
+              className="w-full h-48 object-cover mb-4 rounded-md"
+            />
+            <div className="text-center">
+              <h3 className="text-2xl font-semibold mb-2">{product.name}</h3>
+              <p className="text-gray-900 mb-4 font-semibold text-lg">{product.description}</p>
+              <p className="text-black bg-white border-2 py-2 border-black rounded-xl font-bold">Pkr {product.price}</p>
+              
+            </div>
           </div>
         </div>
       ))}
