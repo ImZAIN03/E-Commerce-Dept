@@ -1,8 +1,30 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
+const ProductModal = ({ product, closeModal }) => (
+  <div className="fixed top-0 left-0 w-full h-full flex items-center justify-center bg-gray-800 bg-opacity-90">
+    <div className="bg-white p-8 rounded-lg">
+      <img
+        src={product.image}
+        alt={product.name}
+        className="w-full h-48 object-cover mb-4 rounded-md shadow-md"
+      />
+      <h3 className="text-xl font-semibold mb-2">{product.name}</h3>
+      <p className="text-gray-600 mb-4">{product.description}</p>
+      <p className="text-gray-800 font-semibold">${product.price}</p>
+      <button
+        onClick={closeModal}
+        className="bg-blue-500 text-white px-4 py-2 mt-4 rounded-md hover:bg-blue-600 focus:outline-none focus:ring focus:border-blue-300"
+      >
+        Close
+      </button>
+    </div>
+  </div>
+);
+
 const NewProducts = ({ addToCart }) => {
   const navigate = useNavigate();
+  const [selectedProduct, setSelectedProduct] = useState(null);
 
   const initialProducts = [
     { id: 1, name: 'Health Care', price: 25, image: 'https://th.bing.com/th/id/OIP.sRufQ_P_SgGVnOBPjYv7wgHaER?rs=1&pid=ImgDetMain', description: 'VitaWell Nutraceuticals introduces RevivePro, a cutting-edge health supplement designed to optimize wellness. RevivePro is formulated with natural ingredients and essential nutrients, aiming to enhance vitality, support immune function.' },
@@ -16,35 +38,46 @@ const NewProducts = ({ addToCart }) => {
 
   ];
 
-return (
-  <div className="container mx-auto p-4">
-    <h2 className="text-3xl font-semibold mb-4">New Products</h2>
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-      {initialProducts.map((product) => (
-        <div key={product.id} className="bg-white p-4 rounded-lg shadow-md">
-          <img
-            src={product.image}
-            alt={product.name}
-            className="w-full h-64 object-cover mb-4 rounded-lg"
-          />
-          <h3 className="text-lg font-semibold mb-2">{product.name}</h3>
-          <p className="text-gray-600 mb-2">{product.description}</p>
-          <p className="text-gray-800">${product.price}</p>
-          <button
-            onClick={() => {
-              addToCart(product);
-              navigate('/cart');
-            }}
-            className="bg-blue-500 text-white px-4 py-2 mt-4 rounded-md hover:bg-blue-600 focus:outline-none focus:ring focus:border-blue-300"
-          >
-            Add to Cart
-          </button>
-        </div>
-      ))}
-    </div>
-  </div>
-);
+  const openModal = (product) => {
+    setSelectedProduct(product);
+  };
 
+  const closeModal = () => {
+    setSelectedProduct(null);
+  };
+
+  return (
+    <div className="container mx-auto p-4">
+      <h2 className="text-4xl font-semibold mb-8 text-center">Explore New Arrivals</h2>
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {initialProducts.map((product) => (
+          <div key={product.id} className="bg-white p-6 rounded-lg shadow-md transition transform hover:scale-105">
+            <img
+              src={product.image}
+              alt={product.name}
+              className="w-full h-48 object-cover mb-4 rounded-md shadow-md cursor-pointer"
+              onClick={() => openModal(product)}
+            />
+            <h3 className="text-xl font-semibold mb-2">{product.name}</h3>
+            <p className="text-gray-600 mb-4">{product.description}</p>
+            <p className="text-gray-800 font-semibold">${product.price}</p>
+            <button
+              onClick={() => {
+                addToCart(product);
+                navigate('/cart');
+              }}
+              className="bg-blue-500 text-white px-4 py-2 mt-4 rounded-md hover:bg-blue-600 focus:outline-none focus:ring focus:border-blue-300"
+            >
+              Add to Cart
+            </button>
+          </div>
+        ))}
+      </div>
+      {selectedProduct && (
+        <ProductModal product={selectedProduct} closeModal={closeModal} />
+      )}
+    </div>
+  );
 };
 
 export default NewProducts;
