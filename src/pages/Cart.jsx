@@ -12,8 +12,8 @@ const Cart = ({ cartItems, removeFromCart }) => {
   }, 0);
 
   return (
-    <div className="container mx-auto p-4 w-4/6 ">
-      <h2 className="text-3xl font-semibold mb-4">Shopping Cart</h2>
+    <div className="container mx-auto p-4 w-4/6">
+      <h2 className="text-3xl font-semibold my-4 bg-white">Shopping Cart</h2>
       {cartItems && cartItems.length === 0 ? (
         <p>Your cart is empty.</p>
       ) : (
@@ -28,12 +28,12 @@ const Cart = ({ cartItems, removeFromCart }) => {
                     className="w-16 h-16 object-cover mr-4"
                   />
                   <div>
-                    <p className="text-lg font-semibold">{cartItem.name}</p>
-                    <p className="text-gray-600">{cartItem.description}</p>
+                    <p className="text-xl font-semibold">{cartItem.name}</p>
+                    <p className="text-gray-900 font-semibold">{cartItem.description}</p>
                     <p className="text-gray-800">${cartItem.price} x {cartItem.quantity}</p>
                     <button
                       onClick={() => handleRemove(cartItem.id)}
-                      className="text-red-500 font-semibold hover:underline focus:outline-none"
+                      className="text-red-600 font-semibold text-md focus:outline-none"
                     >
                       Remove
                     </button>
