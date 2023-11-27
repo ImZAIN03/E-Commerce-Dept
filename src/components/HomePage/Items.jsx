@@ -75,7 +75,7 @@ const Items = ({ addToCart }) => {
     <div className="flex flex-wrap justify-center items-center">
       {products.map((product) => (
         <div key={product.id} className="m-4 w-full md:w-1/2 lg:w-1/3 xl:w-1/4">
-          <div className="bg-gray-100 p-6 rounded-lg shadow-md border border-neutral-600">
+          <div className="bg-gray-100 p-6 rounded-lg shadow-md border-2 border-neutral-700">
             <img
               src={product.image}
               alt={product.name}
@@ -84,7 +84,7 @@ const Items = ({ addToCart }) => {
             <div className="text-center">
               <h3 className="text-2xl font-semibold mb-2">{product.name}</h3>
               <p className="text-gray-900 mb-4 font-semibold text-lg">{product.description}</p>
-              <p className="text-black bg-white border-2 py-2 border-black rounded-xl font-bold">Pkr {product.price}</p>
+              <p className="text-black bg-white border-2 py-2 border-black rounded-xl font-bold">PKR {product.price}</p>
               
             </div>
           </div>
