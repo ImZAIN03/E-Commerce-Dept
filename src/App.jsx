@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { app } from './Firebase';
 import Navbar from './components/Navbar';
 import HomePage from './pages/HomePage';
 import Footer from './components/Footer';
@@ -29,7 +30,7 @@ const App = () => {
   const removeFromCart = (productId) => {
     setCartItems((prevCartItems) => prevCartItems.filter((item) => item.id !== productId));
   };
-
+console.log(app)
   return (
     <Router>
       <Navbar />

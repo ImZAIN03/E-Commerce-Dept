@@ -90,7 +90,7 @@ const Items = ({ addToCart }) => {
               <h3 className="text-2xl font-semibold mb-2">{product.name}</h3>
               <p className="text-gray-900 mb-4 font-semibold text-lg">{product.description}</p>
               <p className="text-white bg-gray-800 border-2 py-2 border-black rounded-full font-bold">PKR {product.price}</p>
-              
+                   
               {product.reviews && (
                 <div className="mt-2">
                   <h4 className="text-xl font-semibold">Customer Reviews:</h4>
