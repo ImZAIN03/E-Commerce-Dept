@@ -8,6 +8,7 @@ const Items = ({ addToCart }) => {
       name: 'Watch',
       price: 1200,
       description: 'Good Quality Watch',
+      reviews: ["⭐⭐⭐"]
     },
     {
       id: 2,
@@ -15,6 +16,7 @@ const Items = ({ addToCart }) => {
       name: 'Laptop',
       price: 30000,
       description: 'Laptop for sale',
+      reviews: ["⭐⭐⭐⭐⭐"]
     },
     {
       id: 3,
@@ -22,6 +24,7 @@ const Items = ({ addToCart }) => {
       name: 'Bathroom Cleaner',
       price: 2590,
       description: 'Bathroom Products for Cleaning',
+      reviews: ["⭐⭐⭐⭐"]
     },
     {
       id: 4,
@@ -29,6 +32,7 @@ const Items = ({ addToCart }) => {
       name: 'Shopping Cart',
       price: 1457,
       description: 'Shopping Cart for products',
+      reviews: ["⭐⭐⭐⭐⭐"]
     },
     {
       id: 5,
@@ -36,6 +40,7 @@ const Items = ({ addToCart }) => {
       name: 'Food Items',
       price: 4560,
       description: 'Every day Food Items',
+      reviews: ["⭐⭐"]
     },
     {
       id: 6,
@@ -43,6 +48,7 @@ const Items = ({ addToCart }) => {
       name: 'Fresh Food',
       price: 7500,
       description: 'Fresh Food on sale.',
+      reviews: ["⭐"]
     },
     {
       id: 7,
@@ -50,13 +56,15 @@ const Items = ({ addToCart }) => {
       name: 'Washing Products',
       price: 1455,
       description: 'Washing Products for everyday use.',
+      reviews: ["⭐⭐⭐⭐"]
     },
     {
       id: 8,
       image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTrUN6WTST0PPEe2BUkCMx0RFn6E0veeIKFyQ&usqp=CAU',
       name: 'Bedroom Set',
       price: 15902,
-      description: 'Elegent Bedroom Set',
+      description: 'Elegant Bedroom Set',
+      reviews: ["⭐⭐⭐"]
     },
     {
       id: 9,
@@ -64,12 +72,9 @@ const Items = ({ addToCart }) => {
       name: 'Clothes Set',
       price: 15902,
       description: 'Clothes Set Description',
+      reviews: ["⭐⭐⭐⭐⭐"]
     }
   ];
-
-  const handleAddToCart = (product) => {
-    addToCart(product);
-  };
 
   return (
     <div className="flex flex-wrap justify-center items-center">
@@ -86,6 +91,20 @@ const Items = ({ addToCart }) => {
               <p className="text-gray-900 mb-4 font-semibold text-lg">{product.description}</p>
               <p className="text-black bg-white border-2 py-2 border-black rounded-xl font-bold">PKR {product.price}</p>
               
+              {/* Display reviews if available */}
+              {product.reviews && (
+                <div className="mt-2">
+                  <h4 className="text-xl font-semibold">Customer Reviews:</h4>
+                  <ul>
+                    {product.reviews.map((review, index) => (
+                      <li key={index} className="mb-2">
+                        <p className="text-gray-700">{review}</p>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              )}
+
             </div>
           </div>
         </div>

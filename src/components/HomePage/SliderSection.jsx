@@ -28,7 +28,7 @@ const SliderSection = () => {
             <img src={image} alt={`Slide ${index + 1}`} className="w-full" />
           </div>
         ))}
-      </Slider>
+      </Slider> 
     </div>
   );
 };
