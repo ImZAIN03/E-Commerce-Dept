@@ -1,16 +1,42 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const CategoriesSection = () => {
   return (
     <div className="text-center">
       <h2 className="mb-4 font-semibold text-2xl">Categories</h2>
-      <select className="p-2 rounded border text-md">
-        <option value="electronics">Electronics</option>
-        <option value="clothing">Clothing</option>
-        <option value="appliances">Appliances</option>
-        <option value="personal care">Personal Care</option>
-        <option value="accessories">Accessories</option>
-      </select>
+      <div className="flex flex-col items-center">
+        <Link
+          to="/new-products"
+          className="category-link my-2 bg-gray-600 hover:bg-gray-800 text-white py-2 px-6 rounded"
+        >
+          Electronics
+        </Link>
+        <Link
+          to="/new-products"
+          className="category-link my-2 bg-gray-600 hover:bg-gray-800 text-white py-2 px-6 rounded"
+        >
+          Clothing
+        </Link>
+        <Link
+          to="/new-products"
+          className="category-link my-2 bg-gray-600 hover:bg-gray-800 text-white py-2 px-6 rounded"
+        >
+          Appliances
+        </Link>
+        <Link
+          to="/new-products"
+          className="category-link my-2 bg-gray-600 hover:bg-gray-800 text-white py-2 px-6 rounded"
+        >
+          Personal Care
+        </Link>
+        <Link
+          to="/new-products"
+          className="category-link my-2 bg-gray-600 hover:bg-gray-800 text-white py-2 px-6 rounded"
+        >
+          Accessories
+        </Link>
+      </div>
     </div>
   );
 };
