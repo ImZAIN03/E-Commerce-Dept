@@ -14,7 +14,7 @@ const CategoriesSection = () => {
         </Link>
         <Link
           to="/new-products"
-          className="category-link my-4 bg-gray-600 hover:bg-gray-800 text-white py-2 px-6 rounded"
+          className="category-link my-4 bg-gray-600 hover:bg-gray-800 text-white py-2 px-8 rounded"
         >
           Clothing
         </Link>
@@ -26,7 +26,7 @@ const CategoriesSection = () => {
         </Link>
         <Link
           to="/new-products"
-          className="category-link my-4 bg-gray-600 hover:bg-gray-800 text-white py-2 px-6 rounded"
+          className="category-link my-4 bg-gray-600 hover:bg-gray-800 text-white py-2 px-4 rounded"
         >
           Personal Care
         </Link>

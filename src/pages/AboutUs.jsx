@@ -14,7 +14,7 @@ const AboutUs = () => {
         <p className="pt-2 text-lg font-semibold">
           The project will be submitted to:
           <span className="block text-sky-700 text-2xl font-bold mt-2">
-            Mam Sara Shahzad
+            Dr Sara Shahzad
           </span>
         </p>
       </div>
