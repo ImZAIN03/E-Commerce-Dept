@@ -79,8 +79,8 @@ const Items = ({ addToCart }) => {
   return (
     <div className="flex flex-wrap justify-center items-center">
       {products.map((product) => (
-        <div key={product.id} className="m-4 w-full md:w-1/2 lg:w-1/3 xl:w-1/4">
-          <div className="bg-gray-100 p-6 rounded-lg shadow-md border-2 border-neutral-700">
+        <div key={product.id} className="mx-8 my-4 w-full md:w-1/2 lg:w-1/3 xl:w-1/4">
+          <div className="bg-gray-100 p-4  rounded-lg shadow-md border-2 border-neutral-700">
             <img
               src={product.image}
               alt={product.name}
