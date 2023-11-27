@@ -35,7 +35,6 @@ const AboutUs = () => {
           Muhammad Awais Khan (118) <br />
           Kulsoom Mubarik (119) <br />
           Umer Shakeel (128) <br />
-          Ubaid Ullah (130) <br />
           Arfa Amir (132) <br />
           Javeria Israr (139) <br />
           Tuba Abrar (144) <br />
