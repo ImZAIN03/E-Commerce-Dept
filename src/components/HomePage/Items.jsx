@@ -6,9 +6,9 @@ const Items = ({ addToCart }) => {
       id: 1,
       image: 'https://images.unsplash.com/photo-1523275335684-37898b6baf30?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cHJvZHVjdHxlbnwwfHwwfHx8MA%3D%3D',
       name: 'Watch',
-      price: 1200,
+      price: 12000,
       description: 'Good Quality Watch',
-      reviews: ["⭐⭐⭐"]
+      reviews: ["⭐⭐⭐ (50)"]
     },
     {
       id: 2,
@@ -16,7 +16,7 @@ const Items = ({ addToCart }) => {
       name: 'Laptop',
       price: 30000,
       description: 'Laptop for sale',
-      reviews: ["⭐⭐⭐⭐⭐"]
+      reviews: ["⭐⭐⭐⭐⭐ (150)"]
     },
     {
       id: 3,
@@ -24,7 +24,7 @@ const Items = ({ addToCart }) => {
       name: 'Bathroom Cleaner',
       price: 2590,
       description: 'Bathroom Products for Cleaning',
-      reviews: ["⭐⭐⭐⭐"]
+      reviews: ["⭐⭐⭐⭐ (20)"]
     },
     {
       id: 4,
@@ -32,7 +32,7 @@ const Items = ({ addToCart }) => {
       name: 'Shopping Cart',
       price: 1457,
       description: 'Shopping Cart for products',
-      reviews: ["⭐⭐⭐⭐⭐"]
+      reviews: ["⭐⭐⭐⭐⭐ (82)"]
     },
     {
       id: 5,
@@ -40,7 +40,7 @@ const Items = ({ addToCart }) => {
       name: 'Food Items',
       price: 4560,
       description: 'Every day Food Items',
-      reviews: ["⭐⭐"]
+      reviews: ["⭐⭐ (420)"]
     },
     {
       id: 6,
@@ -48,7 +48,7 @@ const Items = ({ addToCart }) => {
       name: 'Fresh Food',
       price: 7500,
       description: 'Fresh Food on sale.',
-      reviews: ["⭐"]
+      reviews: ["⭐ (80)"]
     },
     {
       id: 7,
@@ -56,7 +56,7 @@ const Items = ({ addToCart }) => {
       name: 'Washing Products',
       price: 1455,
       description: 'Washing Products for everyday use.',
-      reviews: ["⭐⭐⭐⭐"]
+      reviews: ["⭐⭐⭐⭐ (45)"]
     },
     {
       id: 8,
@@ -64,15 +64,15 @@ const Items = ({ addToCart }) => {
       name: 'Bedroom Set',
       price: 15902,
       description: 'Elegant Bedroom Set',
-      reviews: ["⭐⭐⭐"]
+      reviews: ["⭐⭐⭐ (56)"]
     },
     {
       id: 9,
       image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTFfha3mKEFOWK3DgWFippxqkIRA-QXodVX4w&usqp=CAU',
       name: 'Clothes Set',
-      price: 15902,
+      price: 1250,
       description: 'Clothes Set Description',
-      reviews: ["⭐⭐⭐⭐⭐"]
+      reviews: ["⭐⭐⭐⭐⭐ (255)"]
     }
   ];
 
@@ -89,9 +89,8 @@ const Items = ({ addToCart }) => {
             <div className="text-center">
               <h3 className="text-2xl font-semibold mb-2">{product.name}</h3>
               <p className="text-gray-900 mb-4 font-semibold text-lg">{product.description}</p>
-              <p className="text-black bg-white border-2 py-2 border-black rounded-xl font-bold">PKR {product.price}</p>
+              <p className="text-white bg-gray-800 border-2 py-2 border-black rounded-full font-bold">PKR {product.price}</p>
               
-              {/* Display reviews if available */}
               {product.reviews && (
                 <div className="mt-2">
                   <h4 className="text-xl font-semibold">Customer Reviews:</h4>
