@@ -1,12 +1,12 @@
-// Navbar.js
 import React, { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';  // Updated import
 import { onAuthStateChanged, signOut } from 'firebase/auth';
 import { auth } from '../Firebase';
 import SearchBar from './HomePage/SearchBar';
 
 const Navbar = () => {
   const [user, setUser] = useState(null);
+  const navigate = useNavigate();  // Updated hook
 
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, (user) => {
@@ -26,6 +26,13 @@ const Navbar = () => {
       });
   };
 
+  const handleSearch = (searchTerm) => {
+    console.log('Searching for:', searchTerm);
+
+    // Redirect to the "/new-products" route using navigate
+    navigate('/new-products');
+  };
+
   return (
     <div className="bg-gradient-to-r from-gray-300 to-gray-400 sticky top-0 bg-white z-50">
       <div className="flex justify-between items-center container mx-auto py-2">
@@ -37,7 +44,8 @@ const Navbar = () => {
         </div>
 
         <div className="flex justify-center flex-1">
-          <SearchBar />
+          {/* Use the SearchBar component here and pass handleSearch function */}
+          <SearchBar onSearch={handleSearch} />
         </div>
 
         {user ? (
