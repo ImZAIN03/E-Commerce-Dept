@@ -10,6 +10,7 @@ import Cart from './pages/Cart';
 import MyAccount from './pages/MyAccount';
 import Login from './pages/Login';
 import Signup from './pages/SignUp';
+import CheckOut from './pages/CheckOut';
 
 const App = () => {
   const [cartItems, setCartItems] = useState([]);
@@ -49,6 +50,7 @@ const App = () => {
         <Route path="/my-account" element={<MyAccount />} />
         <Route path="/login" element={<Login/>} />
         <Route path="/signup" element={<Signup/>} />
+        <Route path="/checkout" element={<CheckOut cartItems={cartItems} />} />
         <Route path="/" element={<HomePage />} />
       </Routes>
       <Footer />

@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Cart = ({ cartItems, removeFromCart }) => {
   console.log('Received cart items in Cart component:', cartItems);
@@ -44,6 +45,11 @@ const Cart = ({ cartItems, removeFromCart }) => {
           </ul>
           <div className="mt-4">
             <p className="text-lg font-semibold">Total: ${totalPrice.toFixed(2)}</p>
+            <Link to="/checkout">
+              <button className="bg-blue-500 text-white px-4 py-2 rounded-md mt-2">
+                Checkout
+              </button>
+            </Link>
           </div>
         </div>
       )}
