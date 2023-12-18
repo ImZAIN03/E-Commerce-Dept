@@ -11,6 +11,7 @@ import MyAccount from './pages/MyAccount';
 import Login from './pages/Login';
 import Signup from './pages/SignUp';
 import CheckOut from './pages/CheckOut';
+import PayNow from './pages/PayNow';
 
 const App = () => {
   const [cartItems, setCartItems] = useState([]);
@@ -51,6 +52,7 @@ const App = () => {
         <Route path="/login" element={<Login/>} />
         <Route path="/signup" element={<Signup/>} />
         <Route path="/checkout" element={<CheckOut cartItems={cartItems} />} />
+        <Route path="/pay-now" element={<PayNow />} />
         <Route path="/" element={<HomePage />} />
       </Routes>
       <Footer />
