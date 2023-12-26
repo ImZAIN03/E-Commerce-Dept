@@ -16,16 +16,18 @@ const MyAccount = () => {
   }, []);
 
   return (
-    <div className="flex flex-col min-h-screen bg-gray-100 items-center justify-center">
+    <div className="flex flex-col min-h-screen bg-gradient-to-b from-gray-200 to-gray-400 items-center justify-center text-white">
       <div className="w-full p-8 max-w-screen-md bg-white shadow-lg rounded-lg">
-        <h2 className="border-b pb-4 text-3xl font-bold text-center text-gray-900 ">My Account</h2>
-        <div className="mt-6 text-lg leading-relaxed">
+        <h2 className="border-b pb-4 text-4xl font-bold text-center text-gray-900 mb-6">
+          My Account
+        </h2>
+        <div className="mt-6 text-lg leading-relaxed text-gray-800">
           {loading ? (
             <p className="text-gray-600">Loading user data...</p>
           ) : user ? (
             <div className="text-center">
-              <p className="text-2xl font-semibold mb-2">
-                Welcome, 
+              <p className="text-2xl font-semibold mb-4">
+                Welcome, {user.displayName || 'User'}!
               </p>
               <p className="text-lg text-gray-700">
                 <strong>Email:</strong> {user.email}
@@ -36,7 +38,7 @@ const MyAccount = () => {
           )}
         </div>
       </div>
-      <footer className="bg-gray-200 px-3 py-4 text-center border-t border-gray-300 text-gray-900 mt-6 rounded-lg">
+      <footer className="bg-gray-200 px-3 py-4 text-center border-2 border-gray-300 text-gray-900 mt-6 rounded-lg">
         &copy; E-Commerce App 2023
       </footer>
     </div>
