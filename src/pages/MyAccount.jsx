@@ -16,7 +16,7 @@ const MyAccount = () => {
   }, []);
 
   return (
-    <div className="flex flex-col min-h-screen bg-gradient-to-b from-gray-200 to-gray-400 items-center justify-center text-white">
+    <div className="flex flex-col min-h-screen bg-sky-100 items-center justify-center text-white">
       <div className="w-full p-8 max-w-screen-md bg-white shadow-lg rounded-lg">
         <h2 className="border-b pb-4 text-4xl font-bold text-center text-gray-900 mb-6">
           My Account
@@ -38,7 +38,7 @@ const MyAccount = () => {
           )}
         </div>
       </div>
-      <footer className="bg-gray-200 px-3 py-4 text-center border-2 border-gray-300 text-gray-900 mt-6 rounded-lg">
+      <footer className="font-semibold bg-gray-100 px-3 py-4 text-center border-2 border-gray-300 text-gray-900 mt-6 rounded-lg">
         &copy; E-Commerce App 2023
       </footer>
     </div>

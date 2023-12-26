@@ -16,7 +16,7 @@ const FavoritesSection = () => {
             <img
               src={product.imageUrl}
               alt={product.name}
-              className="w-32 h-32 object-cover mx-auto rounded-full my-2"
+              className="w-32 h-32 object-cover mx-auto rounded-md my-2"
             />
             <p className="mt-1 font-semibold text-md">{product.name}</p>
           </div>
