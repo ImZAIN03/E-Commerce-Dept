@@ -9,7 +9,7 @@ const Items = ({ addToCart }) => {
       price: 12000,
       description: 'Good Quality Watch',
       reviews: ["⭐⭐⭐ (50)"]
-    },
+    },  
     {
       id: 2,
       image: 'https://images.unsplash.com/photo-1603302576837-37561b2e2302?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8bGFwdG9wc3xlbnwwfHwwfHx8MA%3D%3D',
