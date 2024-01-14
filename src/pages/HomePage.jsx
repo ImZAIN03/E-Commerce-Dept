@@ -5,7 +5,7 @@ import Items from '../components/HomePage/Items';
 
 const HomePage = () => {
   return (
-    <div className='bg-slate-50'>
+    <div className='bg-slate-100'>
       <Hero/>
       <MainSection/>
       <Items/>
